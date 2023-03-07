@@ -15,11 +15,17 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet var JokeTypeID: UIStackView!
+    @IBOutlet var JokeIDStack: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        JokeIDStack.layer.borderWidth = 2
+        JokeIDStack.layer.borderColor = UIColor.jkBlack.cgColor
         
-//        JokeIDView.addBorder(color: UIColor.black, backgroundColor: .white, thickness: 8)
+        JokeTypeID.layer.borderWidth = 2
+        JokeTypeID.layer.borderColor = UIColor.jkBlack.cgColor
+        
         // Do any additional setup after loading the view.
     }
 
