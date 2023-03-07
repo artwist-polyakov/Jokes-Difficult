@@ -14,6 +14,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet var setupStack: UIStackView!
+    
+    @IBOutlet var viewWithJoke: UIView!
     
     @IBOutlet var JokeTypeID: UIStackView!
     @IBOutlet var JokeIDStack: UIStackView!
@@ -26,9 +30,21 @@ class ViewController: UIViewController {
         JokeTypeID.layer.borderWidth = 2
         JokeTypeID.layer.borderColor = UIColor.jkBlack.cgColor
         
+        setupStack.layer.borderWidth = 2
+        setupStack.layer.borderColor = UIColor.jkBlack.cgColor
+        
+
+        
+
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
 
+    
+    
+    
 }
 

@@ -15,6 +15,7 @@
 		AF087DE429B689B500623AC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF087DE229B689B500623AC6 /* LaunchScreen.storyboard */; };
 		AF087DEC29B689DF00623AC6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF087DEB29B689DF00623AC6 /* Roboto-Regular.ttf */; };
 		AF087DEE29B71F0500623AC6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF087DED29B71F0500623AC6 /* UIColor+Extensions.swift */; };
+		AF4DEBE329B7CB2D001BDC8D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DEBE229B7CB2D001BDC8D /* Roboto-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AF087DE529B689B500623AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF087DEB29B689DF00623AC6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		AF087DED29B71F0500623AC6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		AF4DEBE229B7CB2D001BDC8D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				AF087DE229B689B500623AC6 /* LaunchScreen.storyboard */,
 				AF087DE529B689B500623AC6 /* Info.plist */,
 				AF087DEB29B689DF00623AC6 /* Roboto-Regular.ttf */,
+				AF4DEBE229B7CB2D001BDC8D /* Roboto-Bold.ttf */,
 			);
 			path = "Jokes Difficult";
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			files = (
 				AF087DE429B689B500623AC6 /* LaunchScreen.storyboard in Resources */,
 				AF087DE129B689B500623AC6 /* Assets.xcassets in Resources */,
+				AF4DEBE329B7CB2D001BDC8D /* Roboto-Bold.ttf in Resources */,
 				AF087DEC29B689DF00623AC6 /* Roboto-Regular.ttf in Resources */,
 				AF087DDF29B689B400623AC6 /* Main.storyboard in Resources */,
 			);

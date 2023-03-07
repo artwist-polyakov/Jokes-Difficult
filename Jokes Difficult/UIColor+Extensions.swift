@@ -15,54 +15,43 @@ extension UIColor {
      }
 
 
-//extension UIView {
-//    func addTopBorderWithColor(color: UIColor, width: CGFloat) {
-//        let border = CALayer()
-//        border.backgroundColor = color.cgColor
-//        border.frame = CGRect(x:0,y: 0, width:self.frame.size.width, height:width)
-//        self.layer.addSublayer(border)
-//    }
-//
-//    func addRightBorderWithColor(color: UIColor, width: CGFloat) {
-//        let border = CALayer()
-//        border.backgroundColor = color.cgColor
-//        border.frame = CGRect(x: self.frame.size.width - width,y: 0, width:width, height:self.frame.size.height)
-//        self.layer.addSublayer(border)
-//    }
-//
-//    func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
-//        let border = CALayer()
-//        border.backgroundColor = color.cgColor
-//        border.frame = CGRect(x:0, y:self.frame.size.height - width, width:self.frame.size.width, height:width)
-//        self.layer.addSublayer(border)
-//    }
-//
-//    func addLeftBorderWithColor(color: UIColor, width: CGFloat) {
-//        let border = CALayer()
-//        border.backgroundColor = color.cgColor
-//        border.frame = CGRect(x:0, y:0, width:width, height:self.frame.size.height)
-//        self.layer.addSublayer(border)
-//    }
-//
-//    func addMiddleBorderWithColor(color: UIColor, width: CGFloat) {
-//        let border = CALayer()
-//        border.backgroundColor = color.cgColor
-//        border.frame = CGRect(x:self.frame.size.width/2, y:0, width:width, height:self.frame.size.height)
-//        self.layer.addSublayer(border)
-//    }
-//    
-//    func addBorder(color: UIColor, backgroundColor: UIColor, thickness: CGFloat, cornerRadius: CGFloat) {
-//        let border = CALayer()
-//        border.backgroundColor = color.cgColor
-//        
-//        border.cornerRadius = cornerRadius
-//        border.borderColor = color.cgColor
-//        border.frame = CGRect(x: thickness,
-//                              y: thickness,
-//                              width: frame.size.width - thickness * 2,
-//                              height: frame.size.height - thickness * 2 )
-//    }
-//}
+extension UIView {
+    func addTopBorderWithColor(color: UIColor, width: CGFloat, delta:CGFloat = 0.0) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:0+delta,y: 0, width:self.frame.size.width -
+                              2*delta, height:width)
+        self.layer.addSublayer(border)
+    }
+
+    func addRightBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: self.frame.size.width - width,y: 0, width:width, height:self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
+
+    func addBottomBorderWithColor(color: UIColor, width: CGFloat, delta:CGFloat = 0.0) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:0 + delta, y:self.frame.size.height - width, width:self.frame.size.width - 2*delta, height:width)
+        self.layer.addSublayer(border)
+    }
+
+    func addLeftBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:0, y:0, width:width, height:self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
+
+    func addMiddleBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:self.frame.size.width/2, y:0, width:width, height:self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
+}
 
 //extension UIStackView {
 //    func addBorder(color: UIColor, backgroundColor: UIColor, thickness: CGFloat) {

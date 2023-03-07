@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
         <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
@@ -22,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="10X-Iq-AYV">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="10X-Iq-AYV" userLabel="Stack View JokeID + Type">
                                 <rect key="frame" x="32" y="123" width="329" height="176"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAa-Y3-g7r" userLabel="Joke ID">
@@ -149,8 +152,8 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fsA-vA-Bng">
-                                <rect key="frame" x="32" y="299" width="329" height="98"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fsA-vA-Bng" userLabel="Setup Stack">
+                                <rect key="frame" x="32" y="299" width="329" height="235"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-gE-bHx">
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="48"/>
@@ -171,18 +174,66 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-ub-hpZ">
-                                        <rect key="frame" x="0.0" y="48" width="329" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txX-aX-zbZ">
+                                        <rect key="frame" x="0.0" y="48" width="329" height="163"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Why did chicken got a penalty?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P81-HG-UsL">
-                                                <rect key="frame" x="24.000000000000014" y="15" width="239.33333333333337" height="21"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e36-QP-EKX">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="163"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="4dn-41-Ymh"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-i5-PNT">
+                                                <rect key="frame" x="24" y="0.0" width="281" height="163"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-XY-tYe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="281" height="2"/>
+                                                        <color key="backgroundColor" name="jkBlack"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="YgQ-VA-B1n"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-ub-hpZ" userLabel="ViewWithJoke">
+                                                        <rect key="frame" x="0.0" y="2" width="281" height="159"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why did chicken got a penalty?" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P81-HG-UsL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="281" height="159"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="159" id="MIT-Xb-2Py"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="P81-HG-UsL" secondAttribute="trailing" id="4h9-92-ol5"/>
+                                                            <constraint firstItem="P81-HG-UsL" firstAttribute="centerY" secondItem="IDJ-ub-hpZ" secondAttribute="centerY" id="BQp-om-4pt"/>
+                                                            <constraint firstAttribute="height" constant="159" id="oLu-tE-iKo"/>
+                                                            <constraint firstItem="P81-HG-UsL" firstAttribute="leading" secondItem="IDJ-ub-hpZ" secondAttribute="leading" id="vYq-mi-duc"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jss-xN-1ww">
+                                                        <rect key="frame" x="0.0" y="161" width="281" height="2"/>
+                                                        <color key="backgroundColor" name="jkBlack"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="IvU-lF-WFd"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKY-ni-0YV">
+                                                <rect key="frame" x="305" y="0.0" width="24" height="163"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="AZd-xZ-Eb2"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WxS-qD-N5f" userLabel="FinalView">
+                                        <rect key="frame" x="0.0" y="211" width="329" height="24"/>
                                         <constraints>
-                                            <constraint firstItem="P81-HG-UsL" firstAttribute="leading" secondItem="IDJ-ub-hpZ" secondAttribute="leading" constant="24" id="5F4-fR-Mrw"/>
+                                            <constraint firstAttribute="height" constant="24" id="I1N-OM-ho5"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -208,11 +259,13 @@
                     <connections>
                         <outlet property="JokeIDStack" destination="eAa-Y3-g7r" id="chg-Ss-5IE"/>
                         <outlet property="JokeTypeID" destination="fVA-Uw-M27" id="0uC-9N-ih7"/>
+                        <outlet property="setupStack" destination="fsA-vA-Bng" id="YMD-qt-Ql3"/>
+                        <outlet property="viewWithJoke" destination="IDJ-ub-hpZ" id="S7c-FR-953"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
