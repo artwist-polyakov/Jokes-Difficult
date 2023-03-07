@@ -14,7 +14,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
+    @IBOutlet var refreshButton: UIButton!
+    
+    @IBOutlet var showPunchlineButton: UIButton!
     @IBOutlet var setupStack: UIStackView!
     
     @IBOutlet var viewWithJoke: UIView!
@@ -33,11 +35,12 @@ class ViewController: UIViewController {
         setupStack.layer.borderWidth = 2
         setupStack.layer.borderColor = UIColor.jkBlack.cgColor
         
+        refreshButton.layer.borderWidth = 2
+        refreshButton.layer.borderColor = UIColor.jkBlack.cgColor
 
         
-
-        
-        
+        showPunchlineButton.layer.borderWidth = 2
+        showPunchlineButton.layer.borderColor = UIColor.jkBlack.cgColor
         
         // Do any additional setup after loading the view.
     }
